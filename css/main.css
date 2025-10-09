@@ -1,0 +1,945 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    position: relative;
+}
+
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+    transition: all 0.25s;
+}
+
+header > .logo {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s;
+}
+
+header > .logo > img {
+    width: 10rem;
+    transition: all 0.25s;
+}
+
+header > .navigation > nav > ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+header > .navigation > nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.25s;
+}
+
+header > .navigation > nav > ul > li > a:hover {
+    color: var(--secondary-color);
+}
+
+header > .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 0.35rem;
+    cursor: pointer;
+}
+
+header > .hamburger > div {
+    width: 25px;
+    height: 2.5px;
+    border-radius: 0.25rem;
+    background-color: white;
+}
+
+header > .active {
+    display: block;
+}
+
+header > .active > nav > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    opacity: 0.980;
+}
+
+header > .active > nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    width: 100%;
+}
+
+.top-section {
+    height: 100vh;
+    position: relative;
+    background-image: url("../images/avit.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -100;
+}
+
+.top-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65); 
+}
+
+.overlay > .anniversary {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.overlay > .anniversary > img {
+    width: 90%;
+}
+
+.overlay {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding-top: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.overlay > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.overlay > div > table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay > div > table > tbody > tr > td:first-child {
+    text-align: left;
+    padding-right: 1rem;
+}
+
+.overlay > div > table > tbody > tr > td:last-child {
+    text-align: left;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.marquee {
+    background-color: white;
+    color: black;
+    padding: 0.5rem;
+    margin-top: 3rem;
+}
+
+.organised-by {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tertiary-color);
+    color: white;
+    padding: 5rem 0;
+}
+
+.organised-by > h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--secondary-color);
+    transition: all 0.25s;
+}
+
+.organised-by > p {
+    font-size: 1.25rem;
+    font-style: italic;
+    transition: all 0.25s;
+}
+
+.organised-by > .sponser-logos {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s;
+}
+
+.organised-by > .sponser-logos > div {
+    background-color: white;
+    padding: 0.85rem;
+    border-radius: 0.35rem;
+}
+
+/* section -3 (members section) */
+.members-section {
+    padding: 5rem 0;
+    display: flex;
+}
+
+.about-members {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.members-align-center {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.members-align-center > div {
+    display: flex;
+    gap: 1rem;
+}
+
+.member-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.members-section > .about-members {
+    display: flex;
+    gap: 1rem;
+}
+
+.member-detail {
+    width: 15rem;
+    background-color: white;
+    padding: 0.75rem;
+    border-radius: 0.35rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+}
+
+.member-image > img {
+    width: 10rem;
+    border-radius: 0.35rem;
+}
+
+.member-detail > .member-name {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.member-detail > .member-position {
+    color: gray;
+}
+
+.member-detail > .member-college {
+    color: var(--tertiary-color);
+}
+
+/* Additional member details (section-4) */
+
+.additional-member-descriptions {
+    display: flex;
+    width: 70%;
+    margin: 2rem auto;
+    gap: 1rem;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    color: var(--fourth-color);
+    font-size: 1.5rem;
+}
+
+.additional-member-left-right-alignment {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 50%;
+}
+
+.conference-co-chair, .advisory-commitee, .program-commitee {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.conference-co-chair > div, .advisory-commitee > div, .program-commitee > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+
+.name > p{
+    color: var(--font-color);
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.post, .department, .college, .location, .extra-unknown {
+    color: var(--dull-font-color);
+    font-size: 0.9rem;
+}
+
+.location {
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+/* section - 5 (Important dates) */
+.important-dates {
+    position: relative;
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    z-index: -99;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.important-dates > h1 {
+    color: var(--secondary-color);
+}
+
+.middle-table-data {
+    color: skyblue;
+    font-size: 1.5rem;
+    position: relative;
+    text-align: center;
+}
+
+.middle-table-data::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 47%;
+    width: 2px;           
+    height: 100%;          
+    background-color: white; 
+    z-index: 10;        
+}
+
+.middle-table-data > i {
+    position: relative;
+    z-index: 20;  
+}
+
+.important-dates > table > tbody > tr > td:first-child {
+    padding-right: 3rem;
+}
+
+.important-dates > table > tbody > tr > td:last-child {
+    padding-left: 3rem;
+}
+
+.important-dates > table > tbody > tr > td > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    color: white;
+}
+
+.important-dates > table > tbody > tr > td > div > .deadline-name {
+    font-size: 1.25rem;
+}
+
+.important-dates > table > tbody > tr > td > div > .deadline-date {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.important-dates > table > tbody > tr > td > div > .deadline-date > i {
+    color: skyblue;
+}
+
+.guideline-button-container {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.guideline-button-container > button {
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    border: none;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.guideline-button-container > button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* model */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 700px;
+  text-align: left;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  color: #333;
+  cursor: pointer;
+}
+
+.guidelines {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+.guidelines > div {
+    border: 3px solid var(--fourth-color);
+    padding: 0.5rem;
+    background-color: white;
+    color: var(--dull-font-color);
+    font-size: 0.9rem;
+    border-radius: 0.35rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+
+    box-shadow: var(--shadow);
+
+    max-width: 500px;
+}
+
+.guidelines > div > h1 {
+    font-size: 1.25rem;
+    color: var(--font-color);
+}
+
+.guidelines > div > ul {
+    padding-left: 1rem;
+}
+
+.fees {
+    background-color: var(--tertiary-color);
+    padding: 2rem 0; 
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.fees > h1 {
+    color: var(--secondary-color);
+}
+
+.fees > div {
+    background-color: white;
+    border-radius: 0.35rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.fees > div > .author-selector-buttons {
+    width: 100%;
+    display: flex;
+    gap: 0.05rem;
+    align-items: center;
+}
+
+.fees > div > .author-selector-buttons > button {
+    width: 50%;
+    background-color: #0066cc;
+    padding: 0.5rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    border-top-right-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+}
+
+.author-selected > p {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+.author-selected, .fees-details {
+    padding: 1rem;
+}
+
+.fees-details > table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border-radius: 12px;
+    overflow: auto; 
+}
+
+.fees-details > table > thead {
+    background: linear-gradient(135deg, #0066cc, #0099ff);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.fees-details > table > thead > tr > td {
+    padding: 0.5rem;
+}
+
+.fees-details > table > tbody > tr:hover {
+    background-color: #e6f4ff;
+}
+
+.fees-details > table > tbody > tr {
+    transition: all 0.2s ease;
+}
+
+.fees-details > table > tbody > tr > td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Conference Theme (section - 7) */
+.conference-theme {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 2.5rem 0;
+}
+
+.conference-theme > h1 {
+    color: var(--font-color);
+}
+
+.conference-theme > .theme-selector {
+    display: flex;
+    gap: 1rem;
+}
+
+.conference-theme > .theme-selector > button {
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    border-radius: 0.25rem;
+    transition: all 0.25s;
+}
+
+.conference-theme > .theme-selector > button:hover {
+    background-color: var(--fourth-color);
+    color: white;
+}
+
+.conference-theme > .theme-title {
+    color: var(--font-color);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.conference-theme > .theme-descriptions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.conference-theme > .theme-descriptions > .description {
+    border: 1.5px solid var(--fourth-color);
+    border-radius: 0.35rem;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    background-color: white;
+    box-shadow: var(--shadow);
+}
+
+/* footer */
+footer {
+    background-color: var(--tertiary-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    color: white;
+}
+
+footer > div, footer > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer > div > h2 {
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+footer > div > .location {
+    color: gray;
+}
+
+footer > div > div > .person-detail > p {
+    color: gray;
+}
+
+footer > div > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+footer > div > ul > li > a {
+    text-decoration: underline;
+    color: white;
+    font-weight: bolder;
+}
+
+/* location */
+.location-iframe {
+    border-radius: 1rem;
+}
+
+/* Responsive Layout */
+@media only screen and (max-width: 800px) {
+    .about-members {
+        width: 60%;
+        justify-content: center;
+        align-items: center;
+    }
+    footer > div, footer > div > div {
+        gap: 0.5rem;
+    }
+    footer > .main-navigations > ul > li {
+        font-size: 0.8rem;
+    }
+    .person-detail {
+        font-size: 0.8rem;
+    }
+    footer > div > h2 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    header > .logo {
+        height: 4rem;
+    }
+    header > .logo > img {
+        width: 8rem;
+    }
+    header > .navigation > nav > ul > li > a {
+        font-size: 0.9rem;
+    }
+    .top-section {
+        height: 80vh;
+    }
+    .organised-by > h2 {
+        font-size: 1.5rem;
+    }
+    .organised-by > p {
+        font-size: 1rem;
+    }
+    .organised-by > .sponser-logos {
+        gap: 2rem;
+    }
+    .organised-by > .sponser-logos > div > img{
+        width: 10rem;
+    }
+    .about-members {
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+    }
+    .fees > div {
+        width: 90%;
+    }
+    .fees > div > .author-selector-buttons > button  {
+        font-size: 1.15rem;
+    }
+    footer > .main-navigations {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    header > .navigation > nav > ul > li > a {
+        font-size: 0.8rem;
+    }
+    .members-align-center {
+        gap: 1rem
+    }
+    .members-align-center > div{
+        gap: 0.5rem;
+    }
+    .member-detail {
+        width: 12rem;
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+    .additional-member-descriptions {
+        width: 85%;
+    }
+    .title {
+        font-size: 1.25rem;
+    }
+    .name > p {
+        font-size: 0.85rem;
+    }
+    .post, .department, .college, .location, .extra-unknown {
+        font-size: 0.8rem;
+    }
+    .fees > div {
+        width: 95%;
+    }
+    .fees > div > .author-selector-buttons > button  {
+        font-size: 1rem;
+    }
+    .author-selected > p {
+        font-size: 1.15rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header > .logo {
+        height: 3rem;
+    }
+    header > .logo > img {
+        width: 7rem;
+    }
+    header > .navigation {
+        display: none;
+    }
+    header > .hamburger {
+        display: flex;
+    }
+    .overlay > h1 {
+        font-size: 1.5rem;
+    }
+    .overlay > div > h2 {
+        font-size: 1rem;
+    }
+    .organised-by > .sponser-logos > div > img{
+        width: 8rem;
+    }
+    .about-members {
+        width: 60%;
+        justify-content: center;
+        align-items: center;
+    }
+    .members-align-center > div{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .important-dates > h1 {
+        font-size: 1.5rem;
+    }
+    .important-dates > table > tbody > tr > td > div > .deadline-name {
+        font-size: 1rem;
+    }
+    .important-dates > table > tbody > tr > td > div > .deadline-date {
+        font-size: 0.85rem;
+    }
+    .important-dates > table > tbody > tr > td:first-child {
+        padding-right: 2rem;
+    }
+    .important-dates > table > tbody > tr > td:last-child {
+        padding-left: 2rem;
+    }
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .overlay > h1 {
+        font-size: 1.25rem;
+    }
+    .overlay > div > h2 {
+        font-size: 0.95rem;
+    }
+    .additional-member-descriptions {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .name > p {
+        font-size: 1.15rem;
+    }
+    .post, .department, .college, .location, .extra-unknown {
+        font-size: 1rem;
+        width: 100%;
+    }
+    .important-dates > h1 {
+        font-size: 1.35rem;
+    }
+    .important-dates > table > tbody > tr > td > div > .deadline-name {
+        font-size: 0.95rem;
+    }
+    .important-dates > table > tbody > tr > td > div > .deadline-date {
+        font-size: 0.8rem;
+    }
+    .important-dates > table > tbody > tr > td:first-child {
+        padding-right: 1.5rem;
+    }
+    .important-dates > table > tbody > tr > td:last-child {
+        padding-left: 1.5rem;
+    }
+    .guideline-button-container {
+        width: 80%;
+    }
+    .guideline-button-container > button {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .overlay > div > table > tbody > tr > td {
+        font-size: 0.85rem;
+    }
+    .important-dates > h1 {
+        font-size: 1.15rem;
+    }
+    .important-dates > table > tbody > tr > td > div > .deadline-name {
+        font-size: 0.85rem;
+    }
+    .important-dates > table > tbody > tr > td > div > .deadline-date {
+        font-size: 0.75rem;
+    }
+    .important-dates > table > tbody > tr > td:first-child {
+        padding-right: 1rem;
+    }
+    .important-dates > table > tbody > tr > td:last-child {
+        padding-left: 1rem;
+    }
+    .guideline-button-container {
+        width: 85%;
+    }
+    .guideline-button-container > button {
+        font-size: 0.95rem;
+    }
+    .location-iframe {
+        width: 300px;
+        height: 100px;
+    }
+    .location {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .organised-by > h2 {
+        font-size: 1.25rem;
+    }
+    .organised-by > p {
+        font-size: 0.95rem;
+    }
+    .organised-by > .sponser-logos {
+        gap: 1rem;
+    }
+    .organised-by > .sponser-logos > div > img{
+        width: 6rem;
+    }
+    .title {
+        font-size: 1rem;
+    }
+    .name > p {
+        font-size: 0.9rem;
+    }
+    .post, .department, .college, .location, .extra-unknown {
+        font-size: 0.85rem;
+    }
+    .guideline-button-container {
+        width: 85%;
+    }
+    .guideline-button-container > button {
+        font-size: 0.9rem;
+    }
+}
