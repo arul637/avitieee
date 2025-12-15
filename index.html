@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/main.css">
+
+    <!-- linking stylesheets -->
     <link rel="stylesheet" href="css/root.css">
-    <title>AVIT Events</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive-layout.css">
+
+    <title>AVIT IEEE</title>
 </head>
 <body>
     
-    <!-- header -->
     <header>
         <div class="logo">
-            <img src="images/avit-logo.png" alt="avit logo">
+            <img src="images/avit-logo.png" alt="AVIT logo">
         </div>
         <div class="navigation">
             <nav>
                 <ul>
-                    <li><a href="#committee">Committee</a></li>
                     <li><a href="#dates">Dates</a></li>
-                    <li><a href="#guidelines">Guidelines</a></li>
-                    <li><a href="#fees">Fees</a></li>
-                    <li><a href="#theme">Theme</a></li>
+                    <li><a href="#committee">Committee</a></li>
+                    <li><a href="#author-guidelines">Author Guidelines</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#conference-tracks">Tracks</a></li>
+                    <li><a href="#call-for-paper">Call for Paper</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -34,11 +39,12 @@
         </div>
     </header>
 
-    <!-- section - 1 (top-section) -->
-    <section class="top-section">
+
+    <!-- section 1 -->
+    <section class="top-section" >
         <div class="overlay">
-            <h1>First International Conference</h1>
-            <h1 style="color: var(--secondary-color);">INNOVATIONS IN ENGINEERING AND NEXT-GENERATION TECHNOLOGIES FOR SUSTAINABILITY</h1>
+            <h1>IC<sup>3</sup>AID 2026</h1>
+            <h1 style="color: var(--tertiary-color);">International Conference on Cognitive Computing, AI & Data Intelligence</h1>
             <div class="anniversary">
                 <img src="images/25th.png" alt="25th anniversary">
             </div>
@@ -70,15 +76,13 @@
                     </tbody>
                 </table>
 
-                <marquee behavior="scroll" direction="left" class="marquee">📢 Submissions are now closed. Thank you for your interest and we look forward to seeing you at the event.</marquee>
+                <!-- <marquee behavior="scroll" direction="left" class="marquee">📢 Submissions are now closed. Thank you for your interest and we look forward to seeing you at the event.</marquee> -->
 
             </div>
         </div>
     </section>
 
-    <div class="line"></div>
-
-    <!-- section - 2 (organised by) -->
+    <!-- section - 2 organized by -->
     <section class="organised-by">
         <h2>Organized by</h2>
 
@@ -88,348 +92,101 @@
 
         <div class="sponser-logos">
             <div>
-                <img src="images/IEEE.svg" alt="IEEE logo">
-            </div>
-            <div>
-                <img src="images/IEEE.svg" alt="IEEE logo">
+                <img src="images/hcltech-logo.svg" alt="HCL Logo">
             </div>
         </div>
     </section>
 
-    <div class="line"></div>
-
-    <!-- section - 3 (about members) -->
-    <section class="members-section" id="committee">
-        <div class="about-members">
-
-            <div class="chief-patron members-align-center">
-                <div>
-                    <p class="member-title">CHIEF PATRONS</p>
+    <!-- section - 3 patrons -->
+    <section class="conference-members-section" id="committee">
+        <div class="conference-members">
+            <h2>CHIEF PATRONS</h2>
+            <div class="members-card">
+                <div class="conference-member-image">
+                    <img src="images/members/ganesan.webp" alt="ganesan image">
                 </div>
-                <div>
-                    <div class="member-detail">
-                        <div class="member-image">
-                            <img src="images/members/mem1.jpg" alt="Member 1 image">
-                        </div>
-                        <div class="member-name">
-                            <p>Smt.S.Malarvizhi</p>
-                        </div>
-                        <div class="member-position">
-                            <p>Chairperson & Managing Trustee</p>
-                        </div>
-                        <div class="member-college">
-                            <p>Aarupadai Veedu Institute of Technology</p>
-                        </div>
-                    </div>
-                    <div class="member-detail">
-                        <div class="member-image">
-                            <img src="images/members/mem1.jpg" alt="Member 1 image">
-                        </div>
-                        <div class="member-name">
-                            <p>Smt.S.Malarvizhi</p>
-                        </div>
-                        <div class="member-position">
-                            <p>Chairperson & Managing Trustee</p>
-                        </div>
-                        <div class="member-college">
-                            <p>Aarupadai Veedu Institute of Technology</p>
-                        </div>
-                    </div>
-                </div>
+                <p class="name">Dr. A.S. Ganesan</p>
+                <p class="role">Chancellor</p>
+                <p class="college">Aarupadai Veedu Institute of Technology, VMRF(DU)</p>
             </div>
-
-            <div class="co-patron members-align-center">
-                <div>
-                    <p class="member-title">CO-PATRONS</p>
+        </div>
+        <div class="conference-members">
+            <h2>CO-PATRONS</h2>
+            <div class="members-card">
+                <div class="conference-member-image">
+                    <img src="images/members/anuradha-ganesan.webp" alt="anuradha ganesan image">
                 </div>
-                <div>
-                    <div class="member-detail">
-                        <div class="member-image">
-                            <img src="images/members/mem1.jpg" alt="Member 1 image">
-                        </div>
-                        <div class="member-name">
-                            <p>Smt.S.Malarvizhi</p>
-                        </div>
-                        <div class="member-position">
-                            <p>CEO</p>
-                        </div>
-                        <div class="member-college">
-                            <p>Aarupadai Veedu Institute of Technology</p>
-                        </div>
-                    </div>
-                </div>
+                <p class="name">Dr. Mrs. Anuradha Ganesan</p>
+                <p class="role">Vice President</p>
+                <p class="college">Aarupadai Veedu Institute of Technology, VMRF(DU)</p>
             </div>
-
-            <div class="conference-chair members-align-center">
-                <div>
-                    <p class="member-title">CONFERENCE CHAIR</p>
+        </div>
+        <div class="conference-members">
+            <h2>CONFERENCE CHAIR</h2>
+            <div class="members-card">
+                <div class="conference-member-image">
+                    <img src="images/members/janet.png" alt="janet image">
                 </div>
-                <div>
-                    <div class="member-detail">
-                        <div class="member-image">
-                            <img src="images/members/mem1.jpg" alt="Member 1 image">
-                        </div>
-                        <div class="member-name">
-                            <p>Smt.S.Malarvizhi</p>
-                        </div>
-                        <div class="member-position">
-                            <p>Chairperson & Managing Trustee</p>
-                        </div>
-                        <div class="member-college">
-                            <p>Aarupadai Veedu Institute of Technology</p>
-                        </div>
+                <p class="name">Dr. J. Janet</p>
+                <p class="role">Principal</p>
+                <p class="college">Aarupadai Veedu Institute of Technology, VMRF(DU)</p>
+            </div>
+        </div>
+        <div class="conference-members">
+            <h2>CONFERENCE CO-CHAIR</h2>
+            <div class="members-card">
+                <div class="conference-member-image">
+                    <img src="images/members/balakrishnan.jpg" alt="balakrishnan image">
+                </div>
+                <p class="name">Dr. S. Balakrishnan</p>
+                <p class="role">Professor and Head</p>
+                <p class="college">Aarupadai Veedu Institute of Technology, VMRF(DU)</p>
+            </div>
+        </div>
+        <div class="conference-members">
+            <h2>Convener</h2>
+            <div class="conference-members-group">
+                <div class="members-card">
+                    <div class="conference-member-image">
+                        <img src="images/members/muthukumaran.jpeg" alt="muthukumaran image">
                     </div>
+                    <p class="name">Dr. M. Muthukumaran</p>
+                    <p class="role">Professor</p>
+                    <p class="college">Aarupadai Veedu Institute of Technology, VMRF(DU)</p>
+                </div>
+                <div class="members-card">
+                    <div class="conference-member-image">
+                        <img src="images/members/rajesh.jpeg" alt="rajesh image">
+                    </div>
+                    <p class="name">Dr. M. Rajesh</p>
+                    <p class="role">Professor</p>
+                    <p class="college">Aarupadai Veedu Institute of Technology, VMRF(DU)</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- section - 4 (additional members descriptions) -->
-    <section class="additional-member-descriptions">
-        <div class="additional-member-left-right-alignment">
-            <div class="conference-co-chair">
-                <p class="title">
-                    Conference Co-Chair
-                </p>
-                <div>
-                    <div class="name">
-                        <p>Dr.D.Sharmila </p>
-                    </div>
-                    <div class="post">
-                        <p>Professor & Head ,</p>
-                    </div>
-                    <div class="department">
-                        <p>Department of Electronics and Communication Engineering,</p>
-                    </div>
-                    <div class="college">
-                        <p>SKCET.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Dr.D.Sharmila </p>
-                    </div>
-                    <div class="post">
-                        <p>Professor & Head ,</p>
-                    </div>
-                    <div class="department">
-                        <p>Department of Electronics and Communication Engineering,</p>
-                    </div>
-                    <div class="college">
-                        <p>SKCET.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="advisory-commitee">
-                <p class="title">
-                    Advisory Committee
-                </p>
-                <div>
-                    <div class="name">
-                        <p>Dr. Shuai Li</p>
-                    </div>
-                    <div class="post">
-                        <p>Associate Professor,</p>
-                    </div>
-                    <div class="college">
-                        <p>Swanesa University, United Kingdom.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Dr. Joao Manuel R. S. Tavares</p>
-                    </div>
-                    <div class="post">
-                        <p>Associate Professor,</p>
-                    </div>
-                    <div class="college">
-                        <p>Faculdade de Engenharia, Universidade do Porto (FEUP),</p>
-                    </div>
-                    <div class="location">
-                        <p>Portugal.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Mr.Samuel Tensingh</p>
-                    </div>
-                    <div class="post">
-                        <p>Associate Lecturer,</p>
-                    </div>
-                    <div class="college">
-                        <p>University of Sydney</p>
-                    </div>
-                    <div class="location">
-                        <p>Australia.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Dr.S.Kumaravel</p>
-                    </div>
-                    <div class="post">
-                        <p>Associate Professor, EEE,</p>
-                    </div>
-                    <div class="college">
-                        <p>NIT, Calicut.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Dr.G.Renuka Devi</p>
-                    </div>
-                    <div class="post">
-                        <p>Associate Professor , ECE,</p>
-                    </div>
-                    <div class="college">
-                        <p>Jawaharlal Nehru University, New Delhi.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- section - 4 additional member details -->
+    <section class="additional-members-details-section">
+        <div class="additional-members-details-left">
+            <!-- JS Handle here -->
         </div>
-        <div class="additional-member-left-right-alignment">
-            <div class="program-commitee">
-                <p class="title">
-                    Program Committee
-                </p>
-                <div>
-                    <div class="name">
-                        <p>Dr.K.Porkumaran</p>
-                    </div>
-                    <div class="post">
-                        <p>Chairman,</p>
-                    </div>
-                    <div class="extra-unknown">
-                        <p>IEEE Madras Section.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Dr.P.Sakthivel</p>
-                    </div>
-                    <div class="post">
-                        <p>Vice-Chairman,</p>
-                    </div>
-                    <div class="extra-unknown">
-                        <p>IEEE Madras Section (Academics).</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Dr.Gladwin Joseph</p>
-                    </div>
-                    <div class="post">
-                        <p>Vice-Chairman,</p>
-                    </div>
-                    <div class="extra-unknown">
-                        <p>IEEE Madras Section (Industry).</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Dr.R.Hariprakash</p>
-                    </div>
-                    <div class="post">
-                        <p>Secretary,</p>
-                    </div>
-                    <div class="extra-unknown">
-                        <p>IEEE Madras Section (Industry).</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Dr.S.Brindha</p>
-                    </div>
-                    <div class="post">
-                        <p>Chair-SAC,</p>
-                    </div>
-                    <div class="extra-unknown">
-                        <p>IEEE Madras Section (Industry).</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Dr.S.Radha</p>
-                    </div>
-                    <div class="post">
-                        <p>Treasurer,</p>
-                    </div>
-                    <div class="extra-unknown">
-                        <p>IEEE Madras Section.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Dr.M.Karpagam</p>
-                    </div>
-                    <div class="post">
-                        <p>Professor, ECE,</p>
-                    </div>
-                    <div class="extra-unknown">
-                        <p>SKCET.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Dr.V.R.Balaji</p>
-                    </div>
-                    <div class="post">
-                        <p>Professor, ECE</p>
-                    </div>
-                    <div class="extra-unknown">
-                        <p>SKCET.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Dr.A.Radhika</p>
-                    </div>
-                    <div class="post">
-                        <p>Professor, ECE</p>
-                    </div>
-                    <div class="extra-unknown">
-                        <p>SKCET.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Dr.S.Sivaranjani</p>
-                    </div>
-                    <div class="post">
-                        <p>Professor, ECE</p>
-                    </div>
-                    <div class="extra-unknown">
-                        <p>SKCET.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="name">
-                        <p>Dr.J.Karthika</p>
-                    </div>
-                    <div class="post">
-                        <p>Professor, ECE</p>
-                    </div>
-                    <div class="extra-unknown">
-                        <p>SKCET.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="additional-members-details-right">
+            <!-- JS Handle here -->
         </div>
     </section>
 
-    <div class="line"></div>
-
-    <!-- section - 5 (Important Dates) -->
+    <!-- section - 5  time line -->
     <section class="important-dates" id="dates">
-        <h1>Important Dates</h1>
+        <h1>Time Line</h1>
         <table>
             <tbody>
                 <tr>
                     <td>
                         <div>
-                            <p class="deadline-name">Full Submission Date</p>
+                            <p class="deadline-name">Last Date for Submission</p>
                             <div class="deadline-date">
-                                <p class="date">10/09/2025</p>
+                                <p class="date">05/03/2026</p>
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                             </div>
                         </div>
@@ -442,10 +199,10 @@
                     <td class="middle-table-data"><i class="fa-solid fa-circle-dot"></i></td>
                     <td>
                         <div>
-                            <p class="deadline-name">Notification of Acceptance</p>
+                            <p class="deadline-name">Last Date for Registration</p>
                             <div class="deadline-date">
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
-                                <p class="date">25/09/2025</p>
+                                <p class="date">28/03/2026</p>
                             </div>
                         </div>
                     </td>
@@ -453,125 +210,118 @@
                 <tr>
                     <td>
                         <div>
-                            <p class="deadline-name">Final Paper Submission</p>
+                            <p class="deadline-name">Date of Conference</p>
                             <div class="deadline-date">
-                                <p class="date">05/10/2025</p>
+                                <p class="date">23/04/2026</p>
+                                <p class="date">24/04/2026</p>
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                             </div>
                         </div>
                     </td>
                     <td class="middle-table-data"><i class="fa-solid fa-circle-dot"></i></td>
                     <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="middle-table-data"><i class="fa-solid fa-circle-dot"></i></td>
-                    <td>
-                        <div>
-                            <p class="deadline-name">Conference Dates</p>
-                            <div class="deadline-date">
-                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                <p class="date">07/11/2025</p>
-                            </div>
-                        </div>
-                    </td>
                 </tr>
             </tbody>
         </table>
     </section>
 
-    <div class="line"></div>
 
-    <!-- section - 6 (Guidelines) -->
-    <section class="guideline-button-container">
-        <!-- ✅ 1. Paper Guidelines Button -->
-<button class="open-btn" id="openPaper">Paper Guidelines</button>
+    <section class="guideline-button-container" id="author-guidelines">
 
-<div id="modalPaper" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" id="closePaper">&times;</span>
-    <h2>Paper Guidelines</h2>
-    <p>The paper must be in English, limited to 6 pages including references, and follow the IEEE conference format. The template is available on the conference website: https://edu.ieee.org/. Submissions are managed via Easychair and will undergo a plagiarism check. The manuscript should not include embedded links, scanned images, headers, or footers.</p>
-  </div>
-</div>
+            <button class="open-btn" id="manuscript-preparation">Manuscript Preparation</button>
+            <div id="open-manuscript-preparation" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Manuscript Preparation</h2>
+                    <ul>
+                        <li>Papers must present original, unpublished research and should not be under review elsewhere.</li>
+                        <li>Manuscripts must be written in English and formatted according to the conference-prescribed template.</li>
+                        <li>The recommended paper length is 6-8 pages (including figures, tables, and references).</li>
+                        <li>Authors must ensure clarity, technical accuracy, and proper organization of the manuscript.</li>
+                    </ul>
+                </div>
+            </div>
 
-<!-- ✅ 2. Manuscript Submission Link -->
-<button class="open-btn" id="openManuscript">Manuscript Submission Link</button>
+            <button class="open-btn" id="paper-submission">Paper Submission</button>
+            <div id="open-paper-submission" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Paper Submission</h2>
+                    <ul>
+                        <li>All papers must be submitted through the online submission system.</li>
+                        <li>Submissions must be in PDF format.</li>
+                        <li>The paper should be prepared for double-blind review; therefore, author names, affiliations, and acknowledgments must be removed from the manuscript.</li>
+                        <li>At least one author of each accepted paper must register and present the paper at the conference.</li>
+                    </ul>
+                </div>
+            </div>
 
-<div id="modalManuscript" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" id="closeManuscript">&times;</span>
-    <h2>Manuscript Submission Link</h2>
-    <p>Due to administrative requirements, please resubmit your paper using the Google Form link provided below. Include your submission number (e.g., ICINVENTS - 051). Link: https://forms.gle/Yye9dPcSWqUpdVbS7</p>
-    <p>All accepted and presented papers may be included in IEEE Xplore after review by HQ.</p>
-    <p>https://easychair.org/conferences/?conf=icinvents2025</p>
-  </div>
-</div>
+            <button class="open-btn" id="plagiarism-policy">Plagiarism Policy</button>
+            <div id="open-plagiarism-policy" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Plagiarism Policy</h2>
+                    <ul>
+                        <li>All submitted papers will be screened using plagiarism detection software.</li>
+                        <li>The similarity index must be within acceptable limits (typically below 15-20%), excluding references.</li>
+                        <li>Papers found to contain plagiarism, self-plagiarism, or fabricated data will be rejected immediately.</li>
+                    </ul>
+                </div>
+            </div>
 
-<!-- ✅ 3. About the Conference -->
-<button class="open-btn" id="openConference">About the Conference</button>
+            <button class="open-btn" id="ethical-statement">Ethical Statement</button>
+            <div id="open-ethical-statement" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Ethical Statement</h2>
+                    <p>IC<sup>3</sup>AID 2026 is committed to maintaining the highest standards of research integrity and publication ethics.</p>
+                    <ul>
+                        <li>Authors must ensure that their research is conducted in an ethical and responsible manner.</li>
+                        <li>Any use of human participants, personal data, or sensitive information must comply with applicable ethical standards and regulations.</li>
+                        <li>Authors must properly acknowledge all sources and avoid data manipulation, falsification, or misrepresentation.</li>
+                        <li>Any conflict of interest that could influence the research outcomes must be clearly disclosed.</li>
+                        <li>Submissions violating ethical norms will be rejected and may be reported to the authors' institutions.</li>
+                    </ul>
+                </div>
+            </div>
 
-<div id="modalConference" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" id="closeConference">&times;</span>
-    <h2>About the Conference</h2>
-    <p>This conference serves as a comprehensive platform to explore the latest in wireless and mobile communication, focusing on 5G, reconfigurable networks, microwave and millimeter-wave engineering. It highlights sustainable research in signal and image processing, antenna design, RF propagation, and electromagnetic computation.</p>
-  </div>
-</div>
+            <button class="open-btn" id="review-policy">Review Policy</button>
+            <div id="open-review-policy" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Review Policy</h2>
+                    <ul>
+                        <li>IC<sup>3</sup>AID 2026 follows a double-blind peer review process.</li>
+                        <li>Each submission will be reviewed by at least two independent experts from the Technical Program Committee.</li>
+                        <li>Papers will be evaluated based on:
+                            <ol style="padding: 1rem 2rem; display: flex; flex-direction: column; gap: 0.3rem;">
+                                <li>Originality and novelty</li>
+                                <li>Technical quality and correctness</li>
+                                <li>Relevance to conference themes</li>
+                                <li>Clarity of presentation</li>
+                                <li>Significance of results</li>
+                            </ol>
+                        </li>
+                        <li>The final decision will be made by the Program Chairs based on reviewers' recommendations.</li>
+                        <li>Reviewers' comments will be shared with authors for improvement.</li>
+                    </ul>
+                </div>
+            </div>
 
-<!-- ✅ 4. About the Institution -->
-<button class="open-btn" id="openInstitution">About the Institution</button>
-
-<div id="modalInstitution" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" id="closeInstitution">&times;</span>
-    <h2>About the Institution</h2>
-    <p>Sri Krishna College of Engineering and Technology (SKCET), established in 1998, is a premier autonomous institution with over 6500+ students, known for experiential education through learning, discovery, and innovation. Accredited by NAAC with an 'A++' Grade, SKCET ranks 83rd in NIRF 2024 among engineering colleges in India.</p>
-  </div>
-</div>
-
-<!-- ✅ 5. About the Department -->
-<button class="open-btn" id="openDepartment">About the Department</button>
-
-<div id="modalDepartment" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" id="closeDepartment">&times;</span>
-    <h2>About the Department</h2>
-    <p>Established in 1998, the ECE Department nurtures engineers with strong academic foundations, ethics, and leadership. Offering B.E. and M.E. programs, it is NBA-accredited and recognized as a research center by Anna University, producing 24 Ph.D. scholars.</p>
-  </div>
-</div>
-
-<!-- ✅ 6. Conference Registration Policies -->
-<button class="open-btn" id="openPolicies">Conference Registration Policies</button>
-
-<div id="modalPolicies" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" id="closePolicies">&times;</span>
-    <h2>Conference Registration Policies</h2>
-    <ul>
-      <li>Online presentations allowed with prior request.</li>
-      <li>Registration fees include conference materials and lunch.</li>
-      <li>Fees are non-refundable and exclude accommodation.</li>
-      <li>At least one author of accepted paper must register.</li>
-    </ul>
-  </div>
-</div>
-
-<!-- ✅ 7. SCOPUS -->
-<button class="open-btn" id="openScopus">SCOPUS</button>
-
-<div id="modalScopus" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" id="closeScopus">&times;</span>
-    <h2>SCOPUS</h2>
-    <p>IEEE provides SCOPUS with all IEEE Xplore digital library content so that bibliographic information becomes visible. Users can then link back to IEEE Xplore for full-text access.</p>
-  </div>
-</div>
+            <button class="open-btn" id="publication-policy">Publication Policy</button>
+            <div id="open-publication-policy" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Publication Policy</h2>
+                    <ul>
+                        <li>Only accepted and presented papers will be included in the conference proceedings.</li>
+                        <li>Selected high-quality papers may be invited for extended versions in indexed journals, subject to additional review.</li>
+                    </ul>
+                </div>
+            </div>
     </section>
 
-    <div class="line"></div>
-
-    <!-- section - 7 (Registration Fees) -->
+    <!-- section - 7 fees  -->
     <section class="fees" id="fees">
         <h1>Registration Fees</h1>
         <div>
@@ -613,65 +363,75 @@
         </div>
     </section>
 
-    <div class="line"></div>
-
-    <!-- section - 8 (Conference Theme) -->
-    <section class="conference-theme">
-        <h1>Conference theme</h1>
+    <!-- section - 8 conference tracks -->
+    <section class="conference-theme" id="conference-tracks">
+        <h1>Conference Tracks</h1>
         <div class="theme-selector">
-            <button>Theme 1</button>
-            <button>Theme 2</button>
-            <button>Theme 3</button>
-            <button>Theme 4</button>
+            <button>Track 1</button>
+            <button>Track 2</button>
+            <button>Track 3</button>
+            <button>Track 4</button>
+            <button>Track 5</button>
+            <button>Track 6</button>
+            <button>Track 7</button>
         </div>
-        <div class="theme-title">Communication Technologies</div>
+        <div class="theme-title">Cognitive Computing & Intelligent Systems</div>
         <div class="theme-descriptions">
             <div class="description">
                 <ul>
-                    <li>Wireless and Mobile Communication Technologies</li>
-                    <li>5G & Reconfigurable Wireless Networks</li>
-                    <li>Microwave and Millimeter Wave Engineering</li>
-                    <li>Signal and Image Processing</li>
-                    <li>Medical Imaging</li>
-                    <li>Antenna Design and RF Propagation</li>
-                </ul>
-            </div>
-            <div class="description">
-                <ul>
-                    <li>Electromagnetic Computation Methods</li>
-                    <li>Network Planning and Capacity Analysis</li>
-                    <li>Cognitive Radio and Dynamic Spectrum Access</li>
-                    <li>Satellite and Space Communications and Networking</li>
-                    <li>RFID Technology and Applications</li>
+                    <li>Cognitive architectures</li>
+                    <li>Knowledge representation & reasoning</li>
+                    <li>Brain-inspired computing</li>
+                    <li>Cognitive robotics</li>
+                    <li>Human-computer cognition</li>
+                    <li>Decision-support systems</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <div class="line"></div>
+    <!-- section - 9 call for paper -->
+    <section id="call-for-paper" class="call-for-paper">
+        <h1>Call for Paper</h1>
+        <div class="call-for-paper-content">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;The rapid evolution of digital technologies has led to an unprecedented growth in data generated from intelligent systems, connected devices, and digital platforms. This transformation has intensified the need for advanced computational paradigms capable of learning, reasoning, and supporting intelligent decision-making. In this context, Cognitive Computing, Artificial Intelligence (AI), and Data Intelligence have emerged as key research domains driving innovation in computer science and engineering.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Cognitive computing aims to emulate human cognitive processes by enabling systems to perceive, interpret, and respond to complex information in a contextual and adaptive manner. When integrated with AI techniques such as machine learning, deep learning, and natural language processing, these systems demonstrate enhanced capabilities in handling unstructured data and solving real-world problems. Concurrently, data intelligence plays a crucial role in extracting meaningful insights from large-scale and heterogeneous datasets through advanced analytics, data mining, and visualization techniques.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;The convergence of cognitive computing, AI, and data intelligence is fundamental to the development of intelligent applications across domains including healthcare, smart cities, finance, education, and industrial automation. However, challenges related to scalability, explainability, security, and ethical deployment of AI systems remain significant. Addressing these challenges requires interdisciplinary research and global collaboration. The IC³AID 2026 conference provides an international platform to advance research, share knowledge, and promote sustainable, human-centric intelligent technologies.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;IC<sup>3</sup>AID 2026 invites original, unpublished, and high-quality research papers from researchers, academicians, industry professionals, and students in the areas of Cognitive Computing, Artificial Intelligence, and Data Intelligence.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;The conference aims to provide an international platform for sharing innovative ideas, research findings, and technological advancements that shape intelligent and data-driven systems for the future.</p>
+
+            <h2>Topics of Interest</h2>
+
+            <ul>
+                <li>Cognitive and intelligent computing</li>
+                <li>Machine learning & deep learning</li>
+                <li>Generative AI and large language models</li>
+                <li>Big data analytics & visualization</li>
+                <li>Explainable, ethical & trustworthy AI</li>
+                <li>AI-based and smart systems</li>
+                <li>Security, privacy & trust in AI systems</li>
+                <li>AI in healthcare, finance, education & agriculture</li>
+                <li>Cloud, edge & federated intelligence</li>
+                <li>Sustainable and green AI</li>
+            </ul>
+
+            <h2>Paper Submission</h2>
+
+            <ul>
+                <li>Original and unpublished research papers</li>
+                <li>Papers must follow the prescribed conference template</li>
+                <li>All submissions will undergo double-blind peer review</li>
+            </ul>
+            
+        </div>
+    </section>
 
     <!-- footer -->
-    <footer>
-        <div class="main-navigations">
-            <h2>Main Links</h2>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#committee">Committee</a></li>
-                <li><a href="#dates">Dates</a></li>
-                <li><a href="#guidelines">Guidelines</a></li>
-                <li><a href="#fees">Fees</a></li>
-                <li><a href="#themes">Themes</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <footer id="contact">
+        <div class="venue">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3892.8675205247973!2d80.17753060990952!3d12.656689987578934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52666a3b419c71%3A0xbf0f1882c4b4ceb1!2sAARUPADAI%20VEEDU%20INSTITUTE%20OF%20TECHNOLOGY!5e0!3m2!1sen!2sin!4v1765787922086!5m2!1sen!2sin" width="300" height="250" style="border-radius: 1rem; border: 1.5px solid var(--primary-color);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div>
-            <h2>Venue</h2>
-            <div class="location-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1946.4316708731808!2d80.17712898864806!3d12.656963863939371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52666a3b419c71%3A0xbf0f1882c4b4ceb1!2sAARUPADAI%20VEEDU%20INSTITUTE%20OF%20TECHNOLOGY!5e0!3m2!1sen!2sin!4v1759986579851!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="location-iframe"></iframe>
-            </div>
-            <div class="location">Kuniamuthur, Coimbatore, Tamil Nadu - 641008</div>
-        </div>
-        <div>
+        <div class="footer-contact">
             <h2>Contact</h2>
             <div>
                 <div class="person-detail">
@@ -692,11 +452,12 @@
         </div>
     </footer>
 
-    <!-- JS Addons -->
+    <!-- Javascript functions -->
     <script src="js/header.js"></script>
-    <script src="js/registration-fees.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="js/members.js"></script>
     <script src="js/guideline-model.js"></script>
+    <script src="js/registration-fees.js"></script>
+    <script src="js/conference-tracks.js"></script>
 
 </body>
 </html>

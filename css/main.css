@@ -1,53 +1,43 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: var(--background-color);
-    position: relative;
-}
-
+/* header */
 header {
-    background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
+    padding: 1rem;
+    background-color: var(--primary-color);
+
     position: sticky;
     top: 0;
-    transition: all 0.25s;
-}
-
-header > .logo {
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.25s;
+    transition: var(--transition);
 }
 
 header > .logo > img {
     width: 10rem;
-    transition: all 0.25s;
+    border-radius: 0.25rem;
+    transition: var(--transition);
 }
 
 header > .navigation > nav > ul {
-    list-style-type: none;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }
 
-header > .navigation > nav > ul > li > a {
+header > .navigation > nav > ul > li, 
+header > .active > nav > ul > li {
+    list-style-type: none;
+}
+
+header > .navigation > nav > ul > li > a,
+header > .active > nav > ul > li > a {
     text-decoration: none;
+    text-transform: uppercase;
     color: white;
-    transition: all 0.25s;
+    transition: var(--transition);
 }
 
-header > .navigation > nav > ul > li > a:hover {
-    color: var(--secondary-color);
+header > .navigation > nav > ul > li > a:hover,
+header > .active > nav > ul > li > a:hover {
+    color: var(--tertiary-color);
 }
 
 header > .hamburger {
@@ -66,33 +56,38 @@ header > .hamburger > div {
 
 header > .active {
     display: block;
+    transition: var(--transition);
 }
 
 header > .active > nav > ul {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    background-color: var(--primary-color);
+    gap: 0.85rem;
+
     position: absolute;
-    top: 100%;
     right: 0;
     width: 100%;
+    background-color: var(--primary-color);
     text-align: center;
-    padding: 1rem 0;
-    opacity: 0.980;
+    top: 100%;
+
+    padding-bottom: 1rem;
+    transition: var(--transition);
+
+    opacity: 0.95;
 }
 
 header > .active > nav > ul > li > a {
-    text-decoration: none;
-    color: white;
+    font-size: 0.9rem;
 }
 
+/* section common */
 section {
     width: 100%;
 }
 
 .top-section {
-    height: 100vh;
+    min-height: 35rem;
     position: relative;
     background-image: url("../images/avit.webp");
     background-position: center;
@@ -106,7 +101,7 @@ section {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.65); 
+    background: rgba(0, 0, 0, 0.75); 
 }
 
 .overlay > .anniversary {
@@ -121,7 +116,7 @@ section {
 }
 
 .overlay > .anniversary > img {
-    width: 90%;
+    width: 100%;
 }
 
 .overlay {
@@ -135,6 +130,11 @@ section {
     align-items: center;
     gap: 2rem;
     width: 100%;
+}
+
+.overlay > h1 {
+    font-size: 2rem;
+    transition: var(--transition);  
 }
 
 .overlay > div {
@@ -174,22 +174,21 @@ section {
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
     color: white;
     padding: 5rem 0;
 }
 
 .organised-by > h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
-    color: var(--secondary-color);
-    transition: all 0.25s;
+    color: white;
+    transition: var(--transition);
 }
 
 .organised-by > p {
     font-size: 1.25rem;
-    font-style: italic;
-    transition: all 0.25s;
+    transition: var(--transition);
 }
 
 .organised-by > .sponser-logos {
@@ -197,7 +196,7 @@ section {
     gap: 4rem;
     justify-content: center;
     align-items: center;
-    transition: all 0.25s;
+    transition: var(--transition);
 }
 
 .organised-by > .sponser-logos > div {
@@ -206,129 +205,194 @@ section {
     border-radius: 0.35rem;
 }
 
-/* section -3 (members section) */
-.members-section {
-    padding: 5rem 0;
+/* conference members */
+.conference-members-section {
+    background-color: var(--primary-color);
+    padding: 3rem 1rem;
     display: flex;
-}
-
-.about-members {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
-.members-align-center {
+.conference-members {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
     align-items: center;
+    gap: 2rem;
 }
 
-.members-align-center > div {
+.conference-members-group {
     display: flex;
     gap: 1rem;
 }
 
-.member-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: var(--primary-color);
+.conference-members > h2 {
+    color: white;
+    font-size: 1.35rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 2rem;
 }
 
-.members-section > .about-members {
-    display: flex;
-    gap: 1rem;
-}
-
-.member-detail {
-    width: 15rem;
-    background-color: white;
-    padding: 0.75rem;
+.members-card {
+    background-color: var(--secondary-color);
+    width: 18rem;
+    height: 22.5rem;
+    padding: 1.5rem 1rem;
     border-radius: 0.35rem;
+    text-align: center;
+
     display: flex;
     flex-direction: column;
-    text-align: center;
-    gap: 0.75rem;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+
+    cursor: pointer;
 }
 
-.member-image > img {
+.members-card:hover {
+    background-color: var(--fifth-color);
+}
+
+.conference-member-image {
     width: 10rem;
-    border-radius: 0.35rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15),
+                0 20px 40px rgba(0, 0, 0, 0.65),
+                0 0 0 5px rgba(0, 0, 0, 0.06);
 }
 
-.member-detail > .member-name {
+.conference-member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.members-card .name {
+    font-size: 1.1rem;
+    font-weight: bolder;
+    color: white;
+    margin-top: 0.5rem;
+}
+
+.members-card .role {
+    font-size: 0.95rem;
     font-weight: bold;
-    color: var(--secondary-color);
+    color: var(--forth-color);
 }
 
-.member-detail > .member-position {
-    color: gray;
+.members-card .college {
+    font-size: 0.85rem;
+    color: white;
+    line-height: 1.4;
 }
 
-.member-detail > .member-college {
+
+/* additional members details */
+.additional-members-details-section {
+    background-color: var(--secondary-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    align-items: start;
+    padding-top: 2rem;
+
+    height: 70rem;
+    overflow-y: scroll;
+    overflow-x: scroll;
+
+    padding-bottom: 2rem;
+
+    transition: var(--transition);
+}
+
+.additional-members-details-left, 
+.additional-members-details-right {
+    width: 25rem;
+    height: 60rem;
+
+    padding-right: 0.5rem;
+
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--font-color);
+    
+    transition: var(--transition);
+}
+
+.additional-members-details-left::-webkit-scrollbar,
+.additional-members-details-right::-webkit-scrollbar {
+    width: 6.5px;
+}
+
+.additional-members-details-left::-webkit-scrollbar-track,
+.additional-members-details-right::-webkit-scrollbar-track {
+    background-color: rgba(207, 207, 225, 0.5);
+}
+
+.additional-members-details-left::-webkit-scrollbar-thumb,
+.additional-members-details-right::-webkit-scrollbar-thumb {
+    background-color: var(--font-color);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.additional-members-details-left::-webkit-scrollbar-thumb:hover,
+.additional-members-details-right::-webkit-scrollbar-thumb:hover {
+    background-color: var(--sixth-color);
+}
+
+.members-classifier {
+    display: flex;
+    flex-direction: column;
+}
+
+.members-classifier > h2 {
+    font-size: 1.2rem;
     color: var(--tertiary-color);
-}
-
-/* Additional member details (section-4) */
-
-.additional-member-descriptions {
-    display: flex;
-    width: 70%;
-    margin: 2rem auto;
-    gap: 1rem;
-}
-
-.title {
-    text-align: center;
     font-weight: bold;
-    color: var(--fourth-color);
-    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    text-align: center;
 }
 
-.additional-member-left-right-alignment {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    width: 50%;
-}
-
-.conference-co-chair, .advisory-commitee, .program-commitee {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.conference-co-chair > div, .advisory-commitee > div, .program-commitee > div {
+.members-descriptions {
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-}
-
-
-.name > p{
     color: var(--font-color);
+    cursor: pointer;
+}
+
+.members-descriptions > .name {
     font-weight: bold;
-    font-size: 0.95rem;
+    color: gray;
 }
 
-.post, .department, .college, .location, .extra-unknown {
-    color: var(--dull-font-color);
-    font-size: 0.9rem;
+.members-descriptions > .place {
+    color: var(--sixth-color);
+    font-weight: bold;
 }
 
-.location {
-    text-transform: capitalize;
-    font-weight: bolder;
+.members-descriptions > .college {
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-/* section - 5 (Important dates) */
+/* Important Dates Section */
 .important-dates {
     position: relative;
-    background-color: var(--tertiary-color);
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -341,7 +405,7 @@ section {
 }
 
 .important-dates > h1 {
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
 }
 
 .middle-table-data {
@@ -380,7 +444,7 @@ section {
     flex-direction: column;
     gap: 0.5rem;
     padding: 1rem 0;
-    color: white;
+    color: var(--font-color);
 }
 
 .important-dates > table > tbody > tr > td > div > .deadline-name {
@@ -397,20 +461,23 @@ section {
     color: skyblue;
 }
 
+/* guidelines */
 .guideline-button-container {
     padding: 3rem 0;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    width: 70%;
-    margin: 0 auto;
+
+    background-color: var(--secondary-color);
 }
 
 .guideline-button-container > button {
     padding: 0.75rem;
     font-size: 1.1rem;
     font-weight: bold;
-    background-color: var(--secondary-color);
+    width: 60%;
+    margin: 0 auto;
+    background-color: var(--fifth-color);
     color: var(--font-color);
     border: none;
     border-radius: 0.35rem;
@@ -419,7 +486,7 @@ section {
 }
 
 .guideline-button-container > button:hover {
-    background-color: var(--primary-color);
+    background-color: var(--sixth-color);
     color: white;
 }
 
@@ -427,7 +494,7 @@ section {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 1001;
   left: 0;
   top: 0;
   width: 100%;
@@ -440,62 +507,48 @@ section {
 .modal-content {
   background: white;
   padding: 30px;
-  border-radius: 12px;
-  width: 80%;
+  border-radius: 0.95rem;
+  width: 90%;
   max-width: 700px;
   text-align: left;
   position: relative;
   animation: fadeIn 0.3s ease;
   max-height: 80vh;
   overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  justify-content: space-between;
+}
+
+.modal-content > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modal-content > ul > li {
+    letter-spacing: 0.25px;
 }
 
 .close-btn {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 22px;
-  color: #333;
+  font-size: 1.5rem;
+  color: red;
   cursor: pointer;
+  transition: var(--transition);
 }
 
-.guidelines {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem 2rem;
+.close-btn:hover {
+    color: orangered;
 }
 
-.guidelines > div {
-    border: 3px solid var(--fourth-color);
-    padding: 0.5rem;
-    background-color: white;
-    color: var(--dull-font-color);
-    font-size: 0.9rem;
-    border-radius: 0.35rem;
-
-    display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
-
-    box-shadow: var(--shadow);
-
-    max-width: 500px;
-}
-
-.guidelines > div > h1 {
-    font-size: 1.25rem;
-    color: var(--font-color);
-}
-
-.guidelines > div > ul {
-    padding-left: 1rem;
-}
-
+/* fees section */
 .fees {
-    background-color: var(--tertiary-color);
+    background-color: var(--primary-color);
     padding: 2rem 0; 
     display: flex;
     flex-direction: column;
@@ -505,11 +558,11 @@ section {
 }
 
 .fees > h1 {
-    color: var(--secondary-color);
+    color: var(--font-color);
 }
 
 .fees > div {
-    background-color: white;
+    background-color: whitesmoke;
     border-radius: 0.35rem;
     display: flex;
     flex-direction: column;
@@ -538,7 +591,9 @@ section {
 .author-selected > p {
     font-size: 1.25rem;
     font-weight: bold;
-    color: var(--font-color);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .author-selected, .fees-details {
@@ -577,22 +632,25 @@ section {
     border-bottom: 1px solid #ddd;
 }
 
-/* Conference Theme (section - 7) */
+
+/* conference theme */
 .conference-theme {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     align-items: center;
     padding: 2.5rem 0;
+    background-color: var(--secondary-color);
 }
 
 .conference-theme > h1 {
-    color: var(--font-color);
+    color: whitesmoke;
 }
 
 .conference-theme > .theme-selector {
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 
 .conference-theme > .theme-selector > button {
@@ -600,21 +658,22 @@ section {
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    background-color: var(--secondary-color);
-    color: var(--font-color);
+    background-color: var(--fifth-color);
+    color: whitesmoke;
     border-radius: 0.25rem;
     transition: all 0.25s;
 }
 
 .conference-theme > .theme-selector > button:hover {
-    background-color: var(--fourth-color);
+    background-color: var(--sixth-color);
     color: white;
 }
 
 .conference-theme > .theme-title {
-    color: var(--font-color);
+    color: whitesmoke;
     font-weight: bold;
     font-size: 1.25rem;
+    text-align: center;
 }
 
 .conference-theme > .theme-descriptions {
@@ -626,320 +685,65 @@ section {
 .conference-theme > .theme-descriptions > .description {
     border: 1.5px solid var(--fourth-color);
     border-radius: 0.35rem;
-    padding: 1rem;
     padding-left: 1.5rem;
-    background-color: white;
+    background-color: whitesmoke;
     box-shadow: var(--shadow);
+    width: 450px;
+    height: 9rem;
+}
+
+.conference-theme > .theme-descriptions > .description > ul {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* call for paper */
+.call-for-paper {
+    padding: 3rem 2rem;
+    color: var(--font-color);
+    background-color: var(--primary-color);
+}
+
+.call-for-paper > h1 {
+    text-align: center;
+}
+
+.call-for-paper-content {
+    margin: 2rem auto;
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.call-for-paper-content > p {
+    text-align: justify;
+}
+
+.call-for-paper-content > ul {
+    padding-left: 2.5rem;
 }
 
 /* footer */
 footer {
-    background-color: var(--tertiary-color);
     display: flex;
-    justify-content: space-between;
-    padding: 2rem 1rem;
-    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem 0;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
 }
 
-footer > div, footer > div > div {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-footer > div > h2 {
-    color: var(--secondary-color);
-    text-align: center;
-}
-
-footer > div > .location {
-    color: gray;
-}
-
-footer > div > div > .person-detail > p {
-    color: gray;
-}
-
-footer > div > ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-footer > div > ul > li > a {
-    text-decoration: underline;
-    color: white;
-    font-weight: bolder;
-}
-
-/* location */
-.location-iframe {
+.venue {
     border-radius: 1rem;
+    overflow: hidden;
 }
 
-/* Responsive Layout */
-@media only screen and (max-width: 800px) {
-    .about-members {
-        width: 60%;
-        justify-content: center;
-        align-items: center;
-    }
-    footer > div, footer > div > div {
-        gap: 0.5rem;
-    }
-    footer > .main-navigations > ul > li {
-        font-size: 0.8rem;
-    }
-    .person-detail {
-        font-size: 0.8rem;
-    }
-    footer > div > h2 {
-        font-size: 1rem;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    header > .logo {
-        height: 4rem;
-    }
-    header > .logo > img {
-        width: 8rem;
-    }
-    header > .navigation > nav > ul > li > a {
-        font-size: 0.9rem;
-    }
-    .top-section {
-        height: 80vh;
-    }
-    .organised-by > h2 {
-        font-size: 1.5rem;
-    }
-    .organised-by > p {
-        font-size: 1rem;
-    }
-    .organised-by > .sponser-logos {
-        gap: 2rem;
-    }
-    .organised-by > .sponser-logos > div > img{
-        width: 10rem;
-    }
-    .about-members {
-        width: 70%;
-        justify-content: center;
-        align-items: center;
-    }
-    .fees > div {
-        width: 90%;
-    }
-    .fees > div > .author-selector-buttons > button  {
-        font-size: 1.15rem;
-    }
-    footer > .main-navigations {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    header > .navigation > nav > ul > li > a {
-        font-size: 0.8rem;
-    }
-    .members-align-center {
-        gap: 1rem
-    }
-    .members-align-center > div{
-        gap: 0.5rem;
-    }
-    .member-detail {
-        width: 12rem;
-        padding: 0.5rem;
-        gap: 0.5rem;
-    }
-    .additional-member-descriptions {
-        width: 85%;
-    }
-    .title {
-        font-size: 1.25rem;
-    }
-    .name > p {
-        font-size: 0.85rem;
-    }
-    .post, .department, .college, .location, .extra-unknown {
-        font-size: 0.8rem;
-    }
-    .fees > div {
-        width: 95%;
-    }
-    .fees > div > .author-selector-buttons > button  {
-        font-size: 1rem;
-    }
-    .author-selected > p {
-        font-size: 1.15rem;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    header > .logo {
-        height: 3rem;
-    }
-    header > .logo > img {
-        width: 7rem;
-    }
-    header > .navigation {
-        display: none;
-    }
-    header > .hamburger {
-        display: flex;
-    }
-    .overlay > h1 {
-        font-size: 1.5rem;
-    }
-    .overlay > div > h2 {
-        font-size: 1rem;
-    }
-    .organised-by > .sponser-logos > div > img{
-        width: 8rem;
-    }
-    .about-members {
-        width: 60%;
-        justify-content: center;
-        align-items: center;
-    }
-    .members-align-center > div{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    .important-dates > h1 {
-        font-size: 1.5rem;
-    }
-    .important-dates > table > tbody > tr > td > div > .deadline-name {
-        font-size: 1rem;
-    }
-    .important-dates > table > tbody > tr > td > div > .deadline-date {
-        font-size: 0.85rem;
-    }
-    .important-dates > table > tbody > tr > td:first-child {
-        padding-right: 2rem;
-    }
-    .important-dates > table > tbody > tr > td:last-child {
-        padding-left: 2rem;
-    }
-    footer {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .overlay > h1 {
-        font-size: 1.25rem;
-    }
-    .overlay > div > h2 {
-        font-size: 0.95rem;
-    }
-    .additional-member-descriptions {
-        width: 90%;
-        flex-direction: column;
-        align-items: center;
-        gap: 2.5rem;
-    }
-    .title {
-        font-size: 1.5rem;
-    }
-    .name > p {
-        font-size: 1.15rem;
-    }
-    .post, .department, .college, .location, .extra-unknown {
-        font-size: 1rem;
-        width: 100%;
-    }
-    .important-dates > h1 {
-        font-size: 1.35rem;
-    }
-    .important-dates > table > tbody > tr > td > div > .deadline-name {
-        font-size: 0.95rem;
-    }
-    .important-dates > table > tbody > tr > td > div > .deadline-date {
-        font-size: 0.8rem;
-    }
-    .important-dates > table > tbody > tr > td:first-child {
-        padding-right: 1.5rem;
-    }
-    .important-dates > table > tbody > tr > td:last-child {
-        padding-left: 1.5rem;
-    }
-    .guideline-button-container {
-        width: 80%;
-    }
-    .guideline-button-container > button {
-        font-size: 1rem;
-    }
-}
-
-@media only screen and (max-width: 450px) {
-    .overlay > div > table > tbody > tr > td {
-        font-size: 0.85rem;
-    }
-    .important-dates > h1 {
-        font-size: 1.15rem;
-    }
-    .important-dates > table > tbody > tr > td > div > .deadline-name {
-        font-size: 0.85rem;
-    }
-    .important-dates > table > tbody > tr > td > div > .deadline-date {
-        font-size: 0.75rem;
-    }
-    .important-dates > table > tbody > tr > td:first-child {
-        padding-right: 1rem;
-    }
-    .important-dates > table > tbody > tr > td:last-child {
-        padding-left: 1rem;
-    }
-    .guideline-button-container {
-        width: 85%;
-    }
-    .guideline-button-container > button {
-        font-size: 0.95rem;
-    }
-    .location-iframe {
-        width: 300px;
-        height: 100px;
-    }
-    .location {
-        font-size: 0.8rem;
-        text-align: center;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    .organised-by > h2 {
-        font-size: 1.25rem;
-    }
-    .organised-by > p {
-        font-size: 0.95rem;
-    }
-    .organised-by > .sponser-logos {
-        gap: 1rem;
-    }
-    .organised-by > .sponser-logos > div > img{
-        width: 6rem;
-    }
-    .title {
-        font-size: 1rem;
-    }
-    .name > p {
-        font-size: 0.9rem;
-    }
-    .post, .department, .college, .location, .extra-unknown {
-        font-size: 0.85rem;
-    }
-    .guideline-button-container {
-        width: 85%;
-    }
-    .guideline-button-container > button {
-        font-size: 0.9rem;
-    }
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }

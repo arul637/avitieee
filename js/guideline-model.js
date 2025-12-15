@@ -1,12 +1,11 @@
 const modals = document.querySelectorAll('.modal');
   const openButtons = [
-    ['openPaper', 'modalPaper'],
-    ['openManuscript', 'modalManuscript'],
-    ['openConference', 'modalConference'],
-    ['openInstitution', 'modalInstitution'],
-    ['openDepartment', 'modalDepartment'],
-    ['openPolicies', 'modalPolicies'],
-    ['openScopus', 'modalScopus']
+    ['manuscript-preparation', 'open-manuscript-preparation'],
+    ['paper-submission', 'open-paper-submission'],
+    ['plagiarism-policy', 'open-plagiarism-policy'],
+    ['ethical-statement', 'open-ethical-statement'],
+    ['review-policy', 'open-review-policy'],
+    ['publication-policy', 'open-publication-policy']
   ];
 
   openButtons.forEach(([btnId, modalId]) => {

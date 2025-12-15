@@ -1,0 +1,222 @@
+@media only screen and (max-width: 900px) {
+    header > .navigation > nav > ul > li > a {
+        font-size: 0.9rem;
+    }
+    .additional-members-details-section {
+        gap: 3rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    header > .navigation > nav > ul > li > a {
+        font-size: 0.85rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    header > .navigation {
+        display: none;
+    }
+    header > .hamburger {
+        display: flex;
+    }
+    .overlay > h1 {
+        font-size: 1.5rem;
+    }
+    .important-dates table td:first-child,
+    .important-dates table td:last-child {
+        padding: 0.5rem;
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .overlay > h1 {
+        font-size: 1.25rem;
+    }
+    .overlay > div > h2 {
+        font-size: 1.2rem;
+    }
+    .overlay > div > table {
+        font-size: 0.9rem;
+    }
+    .organised-by > h2 {
+        font-size: 2rem;
+    }
+    .additional-members-details-section {
+        gap: 1rem;
+    }
+    .members-classifier > h2 {
+        font-size: 1rem;
+    }
+    .members-classifier > p {
+        font-size: 0.85rem;
+    }
+    .additional-members-details-left, 
+    .additional-members-details-right {
+        width: 20rem;
+    }
+    .conference-members-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    .fees > div {
+        width: 90%;
+    }
+    .fees > div > .author-selector-buttons > button  {
+        font-size: 1.15rem;
+    }
+    .conference-theme > h1 {
+        font-size: 1.85rem;
+    }
+    .conference-theme > .theme-selector > button {
+        padding: 0.75rem;
+    }
+    .call-for-paper-content {
+        width: 80%;
+    }
+    footer {
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    .fees > div {
+        width: 95%;
+    }
+    .fees > div > .author-selector-buttons > button  {
+        font-size: 1rem;
+    }
+    .conference-theme > h1 {
+        font-size: 1.65rem;
+    }
+    .conference-theme > .theme-selector > button {
+        padding: 0.65rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .important-dates > h1 {
+        font-size: 1.5rem;
+    }
+    .important-dates > table > tbody > tr > td > div > .deadline-name {
+        font-size: 1rem;
+    }
+    .important-dates > table > tbody > tr > td > div > .deadline-date {
+        font-size: 0.85rem;
+    }
+    .important-dates > table > tbody > tr > td:first-child {
+        padding-right: 2rem;
+    }
+    .important-dates > table > tbody > tr > td:last-child {
+        padding-left: 2rem;
+    }
+    .conference-theme > .theme-selector {
+        flex-wrap: wrap;
+    }
+    .conference-theme > .theme-title {
+        font-size: 1rem;
+    }
+    .call-for-paper-content {
+        width: 85%;
+    }
+    footer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .additional-members-details-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .additional-members-details-left, 
+    .additional-members-details-right {
+        background-color: var(--primary-color);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        width: 25rem;
+    }
+    .important-dates > h1 {
+        font-size: 1.35rem;
+    }
+    .important-dates > table > tbody > tr > td > div > .deadline-name {
+        font-size: 0.95rem;
+    }
+    .important-dates > table > tbody > tr > td > div > .deadline-date {
+        font-size: 0.8rem;
+    }
+    .important-dates > table > tbody > tr > td:first-child {
+        padding-right: 1.5rem;
+    }
+    .important-dates > table > tbody > tr > td:last-child {
+        padding-left: 1.5rem;
+    }
+    .call-for-paper-content {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .important-dates > h1 {
+        font-size: 1.15rem;
+    }
+    .important-dates > table > tbody > tr > td > div > .deadline-name {
+        font-size: 0.85rem;
+    }
+    .important-dates > table > tbody > tr > td > div > .deadline-date {
+        font-size: 0.75rem;
+    }
+    .important-dates > table > tbody > tr > td:first-child {
+        padding-right: 1rem;
+    }
+    .important-dates > table > tbody > tr > td:last-child {
+        padding-left: 1rem;
+    }
+    .venue iframe {
+        width: "300";
+    }
+    .guideline-button-container > button {
+        width: 80%;
+        font-size: 1rem;
+    }
+    .conference-theme > .theme-descriptions > .description {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .overlay > div > table {
+        font-size: 0.85rem;
+    }
+    .organised-by > h2 {
+        font-size: 1.5rem;
+    }
+    .organised-by > p {
+        font-size: 1rem;
+    }
+    .additional-members-details-left, 
+    .additional-members-details-right {
+        width: 22.5rem;
+    }
+    .conference-theme > .theme-descriptions > .description {
+        width: 350px;
+    }
+    .call-for-paper-content {
+        width: 95%;
+    }
+    .call-for-paper-content > p {
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .additional-members-details-left, 
+    .additional-members-details-right {
+        width: 20rem;
+    }
+}
