@@ -20,7 +20,7 @@ const left_side_committee_members = [
                 name: "Dr. Jagadessh Pasupuleti",
                 role: "Professor",
                 department: "",
-                college: "Universiti Tenaga Nasional",
+                college: "University Tenaga Nasional",
                 place: "Malaysia"
             }
         ]
@@ -50,7 +50,7 @@ const left_side_committee_members = [
             },
             {
                 "name": "Dr. R. Malathi",
-                "college": "Annamaliaunviresity",
+                "college": "Annamalai University",
                 "place": "India"
             }
         ]
@@ -229,7 +229,7 @@ const right_side_committee_members = [
         title: "TECHNICAL COMMITTEE",
         members: [
             { "name": "Prof. K.T. Arasu", "college": "Wright State University Dayton", "place": "Ohio, North America" },
-            { "name": "Dr. Mohammad Ayoub Khan", "college": "TaibahUniveristy", "place": "Kindom of Saudi Arabia" },
+            { "name": "Dr. Mohammad Ayoub Khan", "college": "Taibah University", "place": "Kindom of Saudi Arabia" },
             { "name": "Dr. Rumyantsev Konstantin", "college": "Southern Federal University", "place": "Russia" },
             { "name": "Dr. Wen-Juan Hou", "college": "National Taiwan Normal University", "place": "Taiwan" },
             { "name": "Prof. Syed AkhatHossain", "college": "Daffofil University", "place": "Dhaka, Bangladesh" },
@@ -238,7 +238,7 @@ const right_side_committee_members = [
             { "name": "Dr. ThippeswamyMn", "college": "University of KwaZulu-Natal", "place": "Durban" },
             { "name": "Dr. Lavneet Singh", "college": "University of Canberra", "place": "Canberra Australia" },
             { "name": "Dr. Wei Wang", "college": "Xi'an Jiaotong-Liverpool University", "place": "China" },
-            { "name": "Dr. Mohd. HelmeyAbdWahab", "college": "UniversitiTun Hussein Onn", "place": "Malaysia" },
+            { "name": "Dr. Mohd. HelmeyAbdWahab", "college": "University Tun Hussein Onn", "place": "Malaysia" },
             { "name": "Dr. Andrew Ware", "college": "University of South Wales", "place": "United Kingdom" },
             { "name": "Dr. ShireenPanchoo", "college": "University of Technology", "place": "Mauritius" },
             { "name": "Dr. SumathyAyyausamy", "college": "Manipal University", "place": "Dubai" },

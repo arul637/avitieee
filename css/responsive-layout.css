@@ -11,6 +11,9 @@
     header > .navigation > nav > ul > li > a {
         font-size: 0.85rem;
     }
+    footer {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -158,6 +161,9 @@
     .call-for-paper-content {
         width: 90%;
     }
+    .contact-information {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -185,6 +191,12 @@
     }
     .conference-theme > .theme-descriptions > .description {
         width: 400px;
+    }
+    .organised-by > h3{
+        font-size: 1rem;
+    }
+    .organised-by > h2{
+        font-size: 1.5rem;
     }
 }
 

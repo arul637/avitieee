@@ -745,5 +745,11 @@ footer {
 .footer-contact {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-information {
+    display: flex;
+    gap: 1rem;
 }
