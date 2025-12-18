@@ -398,10 +398,15 @@ section {
     gap: 3rem;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     z-index: -99;
-    overflow-x: auto;
-    overflow-y: auto;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.important-dates > table {
+    border: 1px solid red;
+    margin: 1rem auto;
 }
 
 .important-dates > h1 {
@@ -431,12 +436,23 @@ section {
     z-index: 20;  
 }
 
-.important-dates > table > tbody > tr > td:first-child {
-    padding-right: 3rem;
+.important-dates > table > tbody > tr > td:first-child  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border: 1px solid green;
 }
 
-.important-dates > table > tbody > tr > td:last-child {
-    padding-left: 3rem;
+.important-dates > table > tbody > tr > td:nth-child(2) {
+    border: 1px solid yellow;
+    padding: 1rem;
+}
+
+.important-dates > table > tbody > tr > td:last-child  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid green;
 }
 
 .important-dates > table > tbody > tr > td > div {

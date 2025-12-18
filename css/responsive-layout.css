@@ -26,11 +26,6 @@
     .overlay > h1 {
         font-size: 1.5rem;
     }
-    .important-dates table td:first-child,
-    .important-dates table td:last-child {
-        padding: 0.5rem;
-        width: 45%;
-    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -110,12 +105,6 @@
     .important-dates > table > tbody > tr > td > div > .deadline-date {
         font-size: 0.85rem;
     }
-    .important-dates > table > tbody > tr > td:first-child {
-        padding-right: 2rem;
-    }
-    .important-dates > table > tbody > tr > td:last-child {
-        padding-left: 2rem;
-    }
     .conference-theme > .theme-selector {
         flex-wrap: wrap;
     }
@@ -152,12 +141,6 @@
     .important-dates > table > tbody > tr > td > div > .deadline-date {
         font-size: 0.8rem;
     }
-    .important-dates > table > tbody > tr > td:first-child {
-        padding-right: 1.5rem;
-    }
-    .important-dates > table > tbody > tr > td:last-child {
-        padding-left: 1.5rem;
-    }
     .call-for-paper-content {
         width: 90%;
     }
@@ -176,11 +159,8 @@
     .important-dates > table > tbody > tr > td > div > .deadline-date {
         font-size: 0.75rem;
     }
-    .important-dates > table > tbody > tr > td:first-child {
-        padding-right: 1rem;
-    }
-    .important-dates > table > tbody > tr > td:last-child {
-        padding-left: 1rem;
+    .important-dates > table > tbody > tr > td:nth-child(2) {
+        padding: 0.25rem;
     }
     .venue iframe {
         width: "300";
