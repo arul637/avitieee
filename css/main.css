@@ -405,7 +405,6 @@ section {
 }
 
 .important-dates > table {
-    border: 1px solid red;
     margin: 1rem auto;
 }
 
@@ -440,11 +439,9 @@ section {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    border: 1px solid green;
 }
 
 .important-dates > table > tbody > tr > td:nth-child(2) {
-    border: 1px solid yellow;
     padding: 1rem;
 }
 
@@ -452,7 +449,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border: 1px solid green;
 }
 
 .important-dates > table > tbody > tr > td > div {
